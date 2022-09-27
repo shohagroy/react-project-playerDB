@@ -1,12 +1,11 @@
 import React from 'react';
 import "./CardComponent.css"
 
-const CardComponent = ({player}) => {
+const CardComponent = ({player, addedButton}) => {
 
     const {strPlayer, strPosition, strSport, strTeam, strThumb} = player
 
 
-    console.log(player)
     return (
         <div className='card'>
             <img src={strThumb} alt="" />
@@ -15,7 +14,7 @@ const CardComponent = ({player}) => {
             <p>Team: {strTeam}</p>
             <p>{strSport}</p>
             
-            <button>Add to Team</button>
+            <button onClick={()=> addedButton(player)}>Add to Team</button>
         </div>
     );
 };

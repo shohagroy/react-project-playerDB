@@ -1,9 +1,20 @@
 import React from 'react';
+import './CartComponent.css'
 
-const CartComponent = () => {
+const CartComponent = ({players}) => {
+
+
+    console.log(players)
     return (
-        <div>
-            this is cart component
+        <div className='cart'>
+            <ol>
+                {
+                    players.map(player => <li 
+                        seletePlayer={player}
+                        >{player.strPlayer}
+                        </li> )
+                }
+            </ol>
         </div>
     );
 };

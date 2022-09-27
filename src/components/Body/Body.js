@@ -13,17 +13,36 @@ const Body = ({search}) => {
         .then(data => setPlayers(data.player))
     },[search]);
 
+
+    const [selectPlayer, setSelectPlayer] = useState([])
+
+    const selectButton = player =>{
+
+        let newSelect = [...selectPlayer, player]
+        setSelectPlayer(newSelect)
+
+    }
+    console.log(selectPlayer)
+
     if(players){
         return (
             <div className='body'>
               <div className='card-section'>
                   {
-                      players.map(player => <CardComponent player={player}/>)
+                      players.map(player => <CardComponent 
+                        addedButton = {selectButton} 
+                        player={player}/>)
                   }
               </div>
     
               <div className='cart-section'>
-                <CartComponent/>
+                <h3>Select Players</h3>
+{/* 
+                {
+                    selectPlayer.map(player => <CartComponent player={player}/>)
+                } */}
+                
+                <CartComponent players={selectPlayer}/>
     
               </div>
             </div>

@@ -16,3 +16,12 @@
 .body .cart-section{
     background-color: white;
 }
+
+
+.cart-section h3{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    margin-top: 0;
+}
