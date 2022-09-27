@@ -1,0 +1,17 @@
+
+
+.header{
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header input{
+    /* height: 7vh; */
+    width: 30vw;
+    font-size: 20px;
+    padding: 10px;
+}

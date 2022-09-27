@@ -1,0 +1,18 @@
+
+
+.body{
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.body .card-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 50px;
+}
+
+.body .cart-section{
+    background-color: white;
+}
